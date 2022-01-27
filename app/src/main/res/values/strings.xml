@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Play App</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_up">SIGN UP</string>
+</resources>
