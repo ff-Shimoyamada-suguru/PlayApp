@@ -23,7 +23,7 @@ class MypageActivity : AppCompatActivity() {
 
         val user = Firebase.auth.currentUser?.email
         user?.let {
-            name.text = user
+            name.text = "You're $user"
         }
 
 

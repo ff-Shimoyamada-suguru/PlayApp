@@ -17,18 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        auth = FirebaseAuth.getInstance() //公式の機銃つFirebase.authではうまく行かない点は要検証
+        auth = FirebaseAuth.getInstance() //公式の記述Firebase.authではうまく行かない点は要検証
 
         val buttonSignUp = findViewById<Button>(R.id.SignupButton)
         val buttonLogin = findViewById<Button>(R.id.LoginButton)
-        val button = findViewById<Button>(R.id.button)
-
-
-        button.setOnClickListener {
-            val intent = Intent(this, MypageActivity::class.java)
-            startActivity(intent)
-        }
-
 
         buttonSignUp.setOnClickListener {
 
@@ -44,12 +36,6 @@ class MainActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         val intent = Intent(this, MypageActivity::class.java)
                         startActivity(intent)
-
-//                        Toast.makeText(
-//                            baseContext, "SignUp 成功",
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-
                     } else {
                         Toast.makeText(
                             baseContext, "SignUp 失敗",
@@ -72,12 +58,6 @@ class MainActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         val intent = Intent(this, MypageActivity::class.java)
                         startActivity(intent)
-
-//                        Toast.makeText(
-//                            baseContext, "Login 成功",
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-
                     } else {
                         Toast.makeText(
                             baseContext, "Login 失敗",
